@@ -381,7 +381,7 @@ const PRODUCTS=[
  {n:'رؤیای صورتی',img:'p5',cfg:{type:'butterfly',count:25,color:'natural',paper:'pink',bow:'pink',extras:['lights']}},
  {n:'بانوی صورتی',img:'p6',cfg:{type:'rose',count:25,color:'pink',paper:'pink',bow:'pink',extras:['butterfly','glitter']}},
  {n:'شبنم',img:'p7',cfg:{type:'rose',count:21,color:'pink',paper:'white',bow:'white',extras:['glitter']}}];
-$('#grid').innerHTML=PRODUCTS.map((p,i)=>`<article class="card"><img src="img/${p.img}.webp" width="480" height="600" alt="دسته‌گل ${p.n}" loading="lazy" decoding="async"><div class="tx"><div><h4>${p.n}</h4><div class="pr">${money(priceRows({...p.cfg,extras:new Set(p.cfg.extras)}).total)}</div></div><button type="button" class="cart" data-i="${i}" aria-label="افزودن ${p.n} به سبد خرید"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${ICON.cart}"/></svg></button></div></article>`).join('');
+$('#grid').innerHTML=PRODUCTS.map((p,i)=>`<article class="card"><img src="img/${p.img}sr.jpg" width="480" height="600" alt="دسته‌گل ${p.n}" loading="lazy" decoding="async"><div class="tx"><div><h4>${p.n}</h4><div class="pr">${money(priceRows({...p.cfg,extras:new Set(p.cfg.extras)}).total)}</div></div><button type="button" class="cart" data-i="${i}" aria-label="افزودن ${p.n} به سبد خرید"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="${ICON.cart}"/></svg></button></div></article>`).join('');
 $('#grid').onclick=e=>{const b=e.target.closest('.cart');if(!b)return;
   b.classList.add('ok');b.firstChild.firstChild.setAttribute('d','M5 12.5l4.5 4.5L19 7.5');
   setTimeout(()=>{b.classList.remove('ok');b.firstChild.firstChild.setAttribute('d',ICON.cart)},1200)};
@@ -390,4 +390,6 @@ document.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>document.getElem
 refresh(true);
 </script>
 
+
 </body></html>
+
