@@ -17,7 +17,6 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  
   background:var(--white); color:var(--ink); font-family:var(--body); font-size:15px; line-height:1.7;
   padding-left:max(16px,env(safe-area-inset-left,0px)); padding-right:max(16px,env(safe-area-inset-right,0px));
   padding-block:0 28px; direction:rtl; -webkit-tap-highlight-color:transparent;
@@ -430,13 +429,13 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!veil.hidden)shut()
 
 /* ready-made designs */
 const PRODUCTS=[
- {n:'ابر و آسمان',d:'رزهای روبانی آبی آسمانی در کاغذ سفید شیری.',img:'src/images/p1.jpg',pos:'50% 72%',cfg:{type:'rose',count:21,color:'sky',paper:'white',bow:'blue',extras:[]}},
- {n:'زرین‌بال',d:'پروانه‌های نچرال و ریسه‌ی نوری گرم.',img:'src/images/p2.jpg',pos:'50% 65%',cfg:{type:'butterfly',count:25,color:'natural',paper:'white',bow:'white',extras:['lights']}},
- {n:'پرواز آبی',d:'پروانه‌های آبی روی ریسه‌ی نوری، با روبان صورتی.',img:'src/images/p3.jpg',pos:'50% 62%',cfg:{type:'butterfly',count:25,color:'blue',paper:'white',bow:'pink',extras:['lights']}},
- {n:'شب و سحر',d:'ست دو دسته‌گل صورتی و مشکی با پروانه‌ی نقره‌ای.',img:'src/images/p4.jpg',pos:'50% 50%',cfg:{type:'rose',count:9,color:'pink',paper:'pink',bow:'pink',extras:['butterfly']}},
- {n:'رؤیای صورتی',d:'پروانه‌های صورتی با نور بنفش. در سازنده نزدیک‌ترین رنگ را می‌بینی.',img:'src/images/p5.jpg',pos:'50% 62%',cfg:{type:'butterfly',count:25,color:'natural',paper:'pink',bow:'pink',extras:['lights']}},
- {n:'بانوی صورتی',d:'رز صورتی با پاپیون ساتن و پروانه‌ی طلایی.',img:'src/images/p6.jpg',pos:'50% 40%',cfg:{type:'rose',count:25,color:'pink',paper:'pink',bow:'pink',extras:['butterfly','glitter']}},
- {n:'شبنم',d:'رزهای صورتی اکلیلی در کاغذ سفید.',img:'src/images/p7.jpg',pos:'50% 58%',cfg:{type:'rose',count:21,color:'pink',paper:'white',bow:'white',extras:['glitter']}}
+ {n:'ابر و آسمان',d:'رزهای روبانی آبی آسمانی در کاغذ سفید شیری.',img:'src/images/img/p1.jpg',pos:'50% 72%',cfg:{type:'rose',count:21,color:'sky',paper:'white',bow:'blue',extras:[]}},
+ {n:'زرین‌بال',d:'پروانه‌های نچرال و ریسه‌ی نوری گرم.',img:'src/images/img/p2.jpg',pos:'50% 65%',cfg:{type:'butterfly',count:25,color:'natural',paper:'white',bow:'white',extras:['lights']}},
+ {n:'پرواز آبی',d:'پروانه‌های آبی روی ریسه‌ی نوری، با روبان صورتی.',img:'src/images/img/p3.jpg',pos:'50% 62%',cfg:{type:'butterfly',count:25,color:'blue',paper:'white',bow:'pink',extras:['lights']}},
+ {n:'شب و سحر',d:'ست دو دسته‌گل صورتی و مشکی با پروانه‌ی نقره‌ای.',img:'src/images/img/p4.jpg',pos:'50% 50%',cfg:{type:'rose',count:9,color:'pink',paper:'pink',bow:'pink',extras:['butterfly']}},
+ {n:'رؤیای صورتی',d:'پروانه‌های صورتی با نور بنفش. در سازنده نزدیک‌ترین رنگ را می‌بینی.',img:'src/images/img/p5.jpg',pos:'50% 62%',cfg:{type:'butterfly',count:25,color:'natural',paper:'pink',bow:'pink',extras:['lights']}},
+ {n:'بانوی صورتی',d:'رز صورتی با پاپیون ساتن و پروانه‌ی طلایی.',img:'src/images/img/p6.jpg',pos:'50% 40%',cfg:{type:'rose',count:25,color:'pink',paper:'pink',bow:'pink',extras:['butterfly','glitter']}},
+ {n:'شبنم',d:'رزهای صورتی اکلیلی در کاغذ سفید.',img:'src/images/img/p7.jpg',pos:'50% 58%',cfg:{type:'rose',count:21,color:'pink',paper:'white',bow:'white',extras:['glitter']}}
 ];
 $('#rail').innerHTML=PRODUCTS.map((p,i)=>`<article class="card"><div class="ph"><img src="${p.img}" alt="دسته‌گل ${p.n}" loading="lazy" style="object-position:${p.pos}"></div><div class="tx"><h4>${p.n}</h4><p>${p.d}</p><button type="button" class="use" data-i="${i}">ویرایش این طرح ←</button></div></article>`).join('');
 $('#rail').onclick=e=>{const b=e.target.closest('.use');if(!b)return;
